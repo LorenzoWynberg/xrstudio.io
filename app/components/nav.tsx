@@ -2,9 +2,20 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export function Nav() {
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const links = [
     { href: "/services", label: "Services" },
@@ -14,11 +25,22 @@ export function Nav() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#1a1a1a]">
+    <nav
+      className={`nav-sticky transition-all duration-300 ${
+        isScrolled ? "scrolled" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          XR<span className="text-[#00ff88]">.</span>STUDIO
+        <Link
+          href="/"
+          className="text-xl font-bold tracking-tight group"
+        >
+          <span className="group-hover:text-[#00ff88] transition-colors">XR</span>
+          <span className="text-[#00ff88]">.</span>
+          <span className="group-hover:text-[#00ff88] transition-colors">STUDIO</span>
         </Link>
+
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <Link
@@ -33,10 +55,27 @@ export function Nav() {
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn-primary text-sm">
+          <Link href="/contact" className="btn-primary text-sm py-2 px-4">
             Contact
           </Link>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button className="md:hidden text-white p-2">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </div>
     </nav>
   );
