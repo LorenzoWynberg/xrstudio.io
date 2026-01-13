@@ -77,18 +77,21 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
-        {/* Animated background orbs */}
-        <div className="gradient-orb top-0 left-0" />
-        <div className="gradient-orb gradient-orb-2 bottom-0 right-0" />
-        <div className="gradient-orb gradient-orb-3 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        {/* Animated background orbs - more visible */}
+        <div className="gradient-orb -top-40 -left-40" />
+        <div className="gradient-orb gradient-orb-2 -bottom-40 -right-40" />
+        <div className="gradient-orb gradient-orb-3 top-1/3 left-1/2 -translate-x-1/2" />
 
         {/* Grid pattern */}
-        <div className="absolute inset-0 grid-pattern opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black" />
+        <div className="absolute inset-0 grid-pattern" />
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
+        <div className="absolute inset-0 hero-gradient" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
           <div className="reveal">
-            <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#1a1a1a] bg-black/50 backdrop-blur-sm mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#00ff88]/30 bg-black/50 backdrop-blur-sm mb-8 shadow-[0_0_20px_rgba(0,255,136,0.2)]">
               <span className="pulse-dot" />
               <span className="text-[#00ff88] text-sm uppercase tracking-[0.2em] font-mono">
                 Production & Experience Engine
@@ -98,7 +101,7 @@ export default function Home() {
 
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] mb-8 reveal reveal-delay-1">
             <span className="block">XR</span>
-            <span className="block text-[#00ff88]">STUDIO</span>
+            <span className="block text-[#00ff88] glow-text">STUDIO</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-[#888] max-w-2xl mx-auto mb-12 leading-relaxed reveal reveal-delay-2">
@@ -128,13 +131,13 @@ export default function Home() {
       </section>
 
       {/* Stats Strip */}
-      <section className="relative border-y border-[#1a1a1a] bg-black">
+      <section className="relative border-y border-[#00ff88]/20 bg-gradient-to-r from-black via-[#0a0a0a] to-black">
         <div className="glow-line absolute top-0 left-0 right-0" />
-        <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#00ff88] mb-2">
+              <div key={i} className="text-center group">
+                <div className="text-5xl md:text-6xl font-bold text-[#00ff88] mb-2 glow-text transition-all group-hover:scale-110">
                   {stat.value}
                 </div>
                 <div className="text-sm text-[#888] uppercase tracking-wider">
@@ -149,7 +152,7 @@ export default function Home() {
 
       {/* What We Do */}
       <section className="py-32 px-6 relative">
-        <div className="gradient-orb gradient-orb-2 top-0 right-0 opacity-50" />
+        <div className="gradient-orb gradient-orb-2 -top-40 -right-40" />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
             <div>
