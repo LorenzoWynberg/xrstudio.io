@@ -23,6 +23,9 @@
 # misc
 .DS_Store
 
+# jujutsu
+.jj/
+
 # original unoptimized images
 /docs/imgs
 *.pem
