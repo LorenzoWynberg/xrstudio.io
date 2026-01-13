@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Nav, Footer } from "./components";
 
 const services = [
   {
@@ -95,31 +96,7 @@ const trustPoints = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold tracking-tight">
-            XR<span className="text-[#00ff88]">.</span>STUDIO
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/services" className="text-sm text-[#888] hover:text-white transition-colors underline-hover">
-              Services
-            </Link>
-            <Link href="/work" className="text-sm text-[#888] hover:text-white transition-colors underline-hover">
-              Work
-            </Link>
-            <Link href="/process" className="text-sm text-[#888] hover:text-white transition-colors underline-hover">
-              Process
-            </Link>
-            <Link href="/about" className="text-sm text-[#888] hover:text-white transition-colors underline-hover">
-              About
-            </Link>
-            <Link href="/contact" className="btn-primary text-sm">
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center grid-pattern">
@@ -310,46 +287,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-[#1a1a1a] py-12 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-            <div>
-              <Link href="/" className="text-xl font-bold tracking-tight">
-                XR<span className="text-[#00ff88]">.</span>STUDIO
-              </Link>
-              <p className="text-[#888] text-sm mt-2">
-                Production & Experience Engine
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-8">
-              <Link href="/services" className="text-sm text-[#888] hover:text-white transition-colors">
-                Services
-              </Link>
-              <Link href="/work" className="text-sm text-[#888] hover:text-white transition-colors">
-                Work
-              </Link>
-              <Link href="/process" className="text-sm text-[#888] hover:text-white transition-colors">
-                Process
-              </Link>
-              <Link href="/about" className="text-sm text-[#888] hover:text-white transition-colors">
-                About
-              </Link>
-              <Link href="/contact" className="text-sm text-[#888] hover:text-white transition-colors">
-                Contact
-              </Link>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-[#1a1a1a] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <p className="text-[#888] text-sm">
-              © {new Date().getFullYear()} XR Studio. All rights reserved.
-            </p>
-            <p className="text-[#888] text-sm">
-              Part of the Broccoli ecosystem
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
