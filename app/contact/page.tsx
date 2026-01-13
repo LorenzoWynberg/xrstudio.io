@@ -27,19 +27,25 @@ export default function ContactPage() {
   const [projectType, setProjectType] = useState("");
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black overflow-hidden">
       <Nav />
 
       {/* Hero */}
-      <section className="pt-32 pb-12 px-6">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
-            Get in Touch
-          </p>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
+      <section className="pt-32 pb-12 px-6 relative">
+        <div className="gradient-orb top-0 right-0 opacity-40" />
+        <div className="gradient-orb gradient-orb-2 bottom-0 left-0 opacity-30" />
+        <div className="absolute inset-0 grid-pattern opacity-20" />
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="reveal">
+            <div className="accent-bar" />
+            <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
+              Get in Touch
+            </p>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 reveal reveal-delay-1">
             Contact Us
           </h1>
-          <p className="text-xl text-[#888] max-w-2xl leading-relaxed">
+          <p className="text-xl text-[#888] max-w-2xl leading-relaxed reveal reveal-delay-2">
             Ready to execute your next event with precision? Tell us about your
             project and we&apos;ll get back to you with next steps.
           </p>
@@ -47,8 +53,8 @@ export default function ContactPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-12 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-12 px-6 relative">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-3 gap-16">
             {/* Form */}
             <div className="lg:col-span-2">

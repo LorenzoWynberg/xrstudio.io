@@ -78,19 +78,25 @@ const clientBenefits = [
 
 export default function ProcessPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black overflow-hidden">
       <Nav />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
-            Our Approach
-          </p>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
+      <section className="pt-32 pb-20 px-6 relative">
+        <div className="gradient-orb top-0 left-0 opacity-40" />
+        <div className="gradient-orb-2 gradient-orb bottom-0 right-0 opacity-30" />
+        <div className="absolute inset-0 grid-pattern opacity-30" />
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="reveal">
+            <div className="accent-bar" />
+            <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
+              Our Approach
+            </p>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 reveal reveal-delay-1">
             Process
           </h1>
-          <p className="text-xl text-[#888] max-w-2xl leading-relaxed">
+          <p className="text-xl text-[#888] max-w-2xl leading-relaxed reveal reveal-delay-2">
             A disciplined execution framework built for scale. We bring structure,
             accountability, and continuous improvement to every production.
           </p>
@@ -98,8 +104,9 @@ export default function ProcessPage() {
       </section>
 
       {/* Process Steps */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-6 relative">
+        <div className="gradient-orb gradient-orb-3 top-1/4 right-0 opacity-20" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="space-y-24">
             {processSteps.map((step, i) => (
               <div
@@ -107,7 +114,7 @@ export default function ProcessPage() {
                 className="grid md:grid-cols-2 gap-12 items-start"
               >
                 <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                  <div className="text-8xl font-bold text-[#1a1a1a] mb-4">
+                  <div className="text-8xl font-bold text-[#1a1a1a] mb-4 group-hover:text-[#222] transition-colors">
                     {step.number}
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
@@ -117,7 +124,7 @@ export default function ProcessPage() {
                     {step.description}
                   </p>
                 </div>
-                <div className={`card p-8 ${i % 2 === 1 ? "md:order-1" : ""}`}>
+                <div className={`card p-8 hover-glow ${i % 2 === 1 ? "md:order-1" : ""}`}>
                   <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-6 font-mono">
                     Key Activities
                   </p>
@@ -137,13 +144,16 @@ export default function ProcessPage() {
       </section>
 
       {/* What Clients Get */}
-      <section className="py-20 px-6 bg-[#050505] border-y border-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-6 bg-[#050505] border-y border-[#1a1a1a] relative overflow-hidden">
+        <div className="glow-line absolute top-0 left-0 right-0" />
+        <div className="gradient-orb bottom-0 left-1/4 opacity-20" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
+            <div className="accent-bar mx-auto" />
             <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
               Client Benefits
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
               What You Get
             </h2>
           </div>
@@ -166,10 +176,12 @@ export default function ProcessPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Request a Production Call
+      <section className="py-32 px-6 relative overflow-hidden">
+        <div className="gradient-orb top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute inset-0 grid-pattern opacity-30" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            Request a <span className="text-[#00ff88]">Production Call</span>
           </h2>
           <p className="text-[#888] text-lg mb-10 max-w-xl mx-auto">
             Let&apos;s discuss how our process can bring structure and excellence to your next event.
