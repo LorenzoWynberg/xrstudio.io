@@ -37,7 +37,7 @@ pnpm lint         # Run ESLint
 
 ## Workflow Rules
 
-- **Always update changelog**: Add all changes to the Changelog section below
+- **Append-only changelog**: After EVERY task/change, immediately add an entry to the Changelog below. This is a running log of all work done.
 - **Always update docs**: Keep documentation in sync with code changes
 - **Commit frequently**: Make atomic commits after each logical change
 - **Push immediately**: Push after every commit
@@ -45,11 +45,12 @@ pnpm lint         # Run ESLint
 ## Changelog (append-only)
 
 ### 2026-01-14
-- **Process section redesign**: Card-based layout with hover effects, 2x2 grid on md, 4-col on lg
-- **Tech background lines**: Increased particle network line thickness (0.5 → 1.5)
-- **Fixed broken links**: `/work/pura-tinta` → `/work/pura-tinta-fest`, `/work/oneiro` → `/work/electric-animals`
-- **Hero slider**: Diversified images, replaced similar shots with Sweetspot
+- **Workflow rules update**: Clarified append-only changelog requirement in CLAUDE.md
 - **Ecosystem section**: Added subtle background image to differentiate from CTA section
+- **Hero slider**: Diversified images, replaced similar shots with Sweetspot
+- **Fixed broken links**: `/work/pura-tinta` → `/work/pura-tinta-fest`, `/work/oneiro` → `/work/electric-animals`
+- **Tech background lines**: Increased particle network line thickness (0.5 → 1.5)
+- **Process section redesign**: Card-based layout with hover effects, 2x2 grid on md, 4-col on lg
 
 ### 2026-01-13
 - **Hero redesign**: Centered headlines with image carousel background, removed scroll indicator
