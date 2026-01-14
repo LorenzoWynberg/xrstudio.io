@@ -460,11 +460,11 @@ export default function Home() {
             <span className="section-label block mb-6">Ecosystem</span>
             <h2 className="text-h2 mb-8 leading-tight">
               <span className="bg-[#00ff88] text-black px-4 py-2 inline-block">
-                Strategy designed by <span className="text-white">Broccoli</span>.
+                Strategy designed by Broccoli.
               </span>
               <br />
               <span className="bg-[#00ff88] text-black px-4 py-2 inline-block mt-2">
-                Executed by <span className="text-white">XR Studio</span>.
+                Executed by XR Studio.
               </span>
             </h2>
             <p className="text-body-lg mb-10 max-w-2xl mx-auto">

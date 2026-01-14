@@ -59,6 +59,7 @@ pnpm lint         # Run ESLint
 2026-01-14 00:55 - Changed Ecosystem section bg image and reduced overlay opacity (80% → 60%)
 2026-01-14 00:58 - Updated Ecosystem text colors: XR Studio white, Broccoli light gray
 2026-01-14 01:00 - Added green highlight effect to Ecosystem headline with white text for brand names
+2026-01-14 01:02 - Changed Ecosystem headline brand names to all black text
 ```
 
 ## Changelog (by version/date)
