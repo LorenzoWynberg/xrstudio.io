@@ -415,7 +415,7 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-sm md:max-w-xl lg:max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-md md:max-w-2xl lg:max-w-5xl mx-auto">
             {processSteps.map((step, i) => (
               <StaggerContainer key={i} className="group relative">
                 <div className="p-6 border border-[#1a1a1a] hover:border-[#00ff88] transition-all duration-300 bg-[#0a0a0a]/50 hover:bg-[#0a0a0a]">
