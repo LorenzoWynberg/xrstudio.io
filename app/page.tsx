@@ -418,9 +418,6 @@ export default function Home() {
           <div className="flex justify-center items-start gap-4 md:gap-0">
             {processSteps.map((step, i) => (
               <StaggerContainer key={i} className="flex-1 max-w-[200px] text-center px-4">
-                <div className="text-6xl md:text-7xl font-bold text-[#00ff88] mb-4">
-                  {step.number}
-                </div>
                 <h3 className="text-lg font-semibold text-white mb-1">{step.title}</h3>
                 <p className="text-sm text-[#666]">{step.subtitle}</p>
               </StaggerContainer>
