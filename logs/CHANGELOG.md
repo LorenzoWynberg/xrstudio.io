@@ -3,6 +3,7 @@
 All notable changes to this project, grouped by date.
 
 ## 2026-01-14
+
 - **Ecosystem section styling**: Green highlight headline, background image, white paragraph text
 - **Workflow rules update**: Clarified append-only changelog requirement in CLAUDE.md
 - **Ecosystem section**: Added subtle background image to differentiate from CTA section
@@ -12,6 +13,7 @@ All notable changes to this project, grouped by date.
 - **Process section redesign**: Card-based layout with hover effects, 2x2 grid on md, 4-col on lg
 
 ## 2026-01-13
+
 - **Hero redesign**: Centered headlines with image carousel background, removed scroll indicator
 - **Style guide implementation**: Created comprehensive design system at `docs/STYLE-GUIDE.md`
 - **Monochromatic green palette**: Removed all blue/purple colors, using #00ff88 and #00cc6a only

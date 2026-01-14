@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from 'react';
 
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
-  direction?: "up" | "left" | "right" | "scale";
+  direction?: 'up' | 'left' | 'right' | 'scale';
   delay?: number;
 }
 
 export function ScrollReveal({
   children,
-  className = "",
-  direction = "up",
+  className = '',
+  direction = 'up',
   delay = 0,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,12 +26,12 @@ export function ScrollReveal({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.classList.add("revealed");
+              entry.target.classList.add('revealed');
             }, delay);
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     );
 
     observer.observe(element);
@@ -40,10 +40,10 @@ export function ScrollReveal({
   }, [delay]);
 
   const directionClass = {
-    up: "scroll-reveal",
-    left: "scroll-reveal-left",
-    right: "scroll-reveal-right",
-    scale: "scroll-reveal-scale",
+    up: 'scroll-reveal',
+    left: 'scroll-reveal-left',
+    right: 'scroll-reveal-right',
+    scale: 'scroll-reveal-scale',
   }[direction];
 
   return (
@@ -58,7 +58,7 @@ interface StaggerContainerProps {
   className?: string;
 }
 
-export function StaggerContainer({ children, className = "" }: StaggerContainerProps) {
+export function StaggerContainer({ children, className = '' }: StaggerContainerProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -69,7 +69,7 @@ export function StaggerContainer({ children, className = "" }: StaggerContainerP
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("revealed");
+            entry.target.classList.add('revealed');
           }
         });
       },
@@ -106,8 +106,8 @@ export function useParallax(speed: number = 0.5) {
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [speed]);
 
   return ref;
@@ -120,7 +120,7 @@ interface ParallaxProps {
   className?: string;
 }
 
-export function Parallax({ children, speed = 0.1, className = "" }: ParallaxProps) {
+export function Parallax({ children, speed = 0.1, className = '' }: ParallaxProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -137,10 +137,10 @@ export function Parallax({ children, speed = 0.1, className = "" }: ParallaxProp
       element.style.transform = `translateY(${offset}px)`;
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial call
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [speed]);
 
   return (

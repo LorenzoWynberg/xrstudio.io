@@ -19,6 +19,7 @@
 ### What We Do (service snapshot)
 
 Cards linking to Services:
+
 - Experience Execution
 - Technical & Stage Design
 - On-Site Operations
@@ -173,6 +174,7 @@ We'll reply with next steps and a discovery checklist.
 **Summary:** Electric Animals is a flagship electronic music festival experience executed through a high-control production model designed for scale, consistency, and premium attendee experience. XR Studio leads end-to-end execution across technical planning, vendor coordination, onsite operations, and live-show control.
 
 **XR Studio scope:**
+
 - Full production execution and venue operations
 - Technical coordination (audio, lighting, video) and run-of-show control
 - Artist/backstage operations and flow management
@@ -190,6 +192,7 @@ We'll reply with next steps and a discovery checklist.
 **Summary:** Pura Tinta Fest is a large-scale cultural convention that demands operational precision across complex attendee flows, exhibitor needs, and continuous programming. XR Studio executes the event as a controlled system—balancing experience, safety, vendor logistics, and content capture.
 
 **XR Studio scope:**
+
 - Convention production and show-floor operations
 - Vendor/exhibitor coordination and logistics
 - Stage/program execution and timing control
@@ -207,6 +210,7 @@ We'll reply with next steps and a discovery checklist.
 **Summary:** Blockchain Jungle is a multi-stakeholder conference environment requiring precise timing, speaker management, and reliable technical production. XR Studio runs the operational backbone—ensuring sessions, stages, and show flow execute cleanly for partners, speakers, and attendees.
 
 **XR Studio scope:**
+
 - Conference production and stage management
 - Speaker operations, schedules, and backstage coordination
 - Technical execution (A/V, lighting, screens) with redundancy mindset
@@ -224,6 +228,7 @@ We'll reply with next steps and a discovery checklist.
 **Summary:** Magflow is a culture and music platform that translates into live experiences and content-driven programming. XR Studio supports execution with production discipline and captures content designed to extend impact beyond event day.
 
 **XR Studio scope:**
+
 - Production planning and live execution support
 - Technical coordination scaled to venue and format
 - Audiovisual production for episodic and promotional use
@@ -240,6 +245,7 @@ We'll reply with next steps and a discovery checklist.
 **Summary:** Sweetspot competitions require a different type of precision: competitive integrity, technical reliability, and audience-ready execution. XR Studio operates events with structured workflows—ensuring brackets, timing, production cues, and onsite experience run smoothly.
 
 **XR Studio scope:**
+
 - Esports event operations and run-of-show execution
 - Stage/stream coordination and timing discipline
 - Onsite logistics for players, staff, and audience

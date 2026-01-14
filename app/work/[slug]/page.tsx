@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { Nav, Footer } from "../../components";
-import { caseStudies, getCaseStudyBySlug } from "../../data/case-studies";
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { Nav, Footer } from '../../components';
+import { caseStudies, getCaseStudyBySlug } from '../../data/case-studies';
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({
@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   return params.then(({ slug }) => {
     const study = getCaseStudyBySlug(slug);
-    if (!study) return { title: "Case Study Not Found" };
+    if (!study) return { title: 'Case Study Not Found' };
     return {
       title: `${study.name} — XR Studio`,
       description: study.summary,
@@ -47,57 +47,49 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-16">
           <Link
             href="/work"
-            className="text-[#888] hover:text-[#00ff88] transition-colors text-sm mb-8 inline-block"
+            className="mb-8 inline-block text-sm text-[#888] transition-colors hover:text-[#00ff88]"
           >
             ← Back to Work
           </Link>
-          <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
+          <p className="mb-4 font-mono text-sm tracking-[0.2em] text-[#00ff88] uppercase">
             {study.category}
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-            {study.name}
-          </h1>
-          <p className="text-xl text-[#ccc] max-w-3xl leading-relaxed">
-            {study.summary}
-          </p>
+          <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl">{study.name}</h1>
+          <p className="max-w-3xl text-xl leading-relaxed text-[#ccc]">{study.summary}</p>
         </div>
       </section>
 
       {/* Scope */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16">
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-16 md:grid-cols-2">
             <div>
-              <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
+              <p className="mb-4 font-mono text-sm tracking-[0.2em] text-[#00ff88] uppercase">
                 XR Studio Scope
               </p>
-              <h2 className="text-3xl font-bold tracking-tight mb-8">
-                What We Did
-              </h2>
+              <h2 className="mb-8 text-3xl font-bold tracking-tight">What We Did</h2>
               <ul className="space-y-4">
                 {study.scope.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#00ff88] mt-2 shrink-0" />
+                    <div className="mt-2 h-2 w-2 shrink-0 bg-[#00ff88]" />
                     <span className="text-[#ccc]">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
+              <p className="mb-4 font-mono text-sm tracking-[0.2em] text-[#00ff88] uppercase">
                 Outcome Focus
               </p>
-              <h2 className="text-3xl font-bold tracking-tight mb-8">
-                Results
-              </h2>
+              <h2 className="mb-8 text-3xl font-bold tracking-tight">Results</h2>
               <div className="space-y-4">
                 {study.outcomes.map((outcome, i) => (
                   <div key={i} className="card p-6">
-                    <span className="text-[#00ff88] font-mono text-sm mb-2 block">
-                      {String(i + 1).padStart(2, "0")}
+                    <span className="mb-2 block font-mono text-sm text-[#00ff88]">
+                      {String(i + 1).padStart(2, '0')}
                     </span>
                     <p className="text-lg font-medium">{outcome}</p>
                   </div>
@@ -110,19 +102,17 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
       {/* Gallery */}
       {study.gallery.length > 0 && (
-        <section className="py-20 px-6 bg-[#050505] border-y border-[#1a1a1a]">
-          <div className="max-w-7xl mx-auto">
-            <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
+        <section className="border-y border-[#1a1a1a] bg-[#050505] px-6 py-20">
+          <div className="mx-auto max-w-7xl">
+            <p className="mb-4 font-mono text-sm tracking-[0.2em] text-[#00ff88] uppercase">
               Gallery
             </p>
-            <h2 className="text-3xl font-bold tracking-tight mb-12">
-              Event Highlights
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <h2 className="mb-12 text-3xl font-bold tracking-tight">Event Highlights</h2>
+            <div className="grid gap-6 md:grid-cols-2">
               {study.gallery.map((image, i) => (
                 <div
                   key={i}
-                  className="relative aspect-[16/10] overflow-hidden bg-[#0a0a0a] border border-[#1a1a1a]"
+                  className="relative aspect-[16/10] overflow-hidden border border-[#1a1a1a] bg-[#0a0a0a]"
                 >
                   <Image
                     src={image}
@@ -138,33 +128,31 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       )}
 
       {/* Other Case Studies */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-4 font-mono text-sm tracking-[0.2em] text-[#00ff88] uppercase">
             More Work
           </p>
-          <h2 className="text-3xl font-bold tracking-tight mb-12">
-            Other Case Studies
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h2 className="mb-12 text-3xl font-bold tracking-tight">Other Case Studies</h2>
+          <div className="grid gap-8 md:grid-cols-2">
             {otherStudies.map((other) => (
               <Link
                 key={other.slug}
                 href={`/work/${other.slug}`}
-                className="group relative aspect-[16/10] overflow-hidden bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#00ff88] transition-all"
+                className="group relative aspect-[16/10] overflow-hidden border border-[#1a1a1a] bg-[#0a0a0a] transition-all hover:border-[#00ff88]"
               >
                 <Image
                   src={other.heroImage}
                   alt={other.name}
                   fill
-                  className="object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500"
+                  className="object-cover opacity-50 transition-all duration-500 group-hover:scale-105 group-hover:opacity-70"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <p className="text-[#00ff88] text-xs uppercase tracking-wider mb-2 font-mono">
+                <div className="absolute right-0 bottom-0 left-0 p-8">
+                  <p className="mb-2 font-mono text-xs tracking-wider text-[#00ff88] uppercase">
                     {other.category}
                   </p>
-                  <h3 className="text-2xl font-semibold group-hover:text-[#00ff88] transition-colors">
+                  <h3 className="text-2xl font-semibold transition-colors group-hover:text-[#00ff88]">
                     {other.name}
                   </h3>
                 </div>
@@ -175,12 +163,12 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       </section>
 
       {/* CTA */}
-      <section className="py-32 px-6 bg-[#050505] border-t border-[#1a1a1a]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+      <section className="border-t border-[#1a1a1a] bg-[#050505] px-6 py-32">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">
             Ready to create your success story?
           </h2>
-          <p className="text-[#888] text-lg mb-10 max-w-xl mx-auto">
+          <p className="mx-auto mb-10 max-w-xl text-lg text-[#888]">
             Let&apos;s discuss how XR Studio can execute your next event.
           </p>
           <Link href="/contact" className="btn-primary">

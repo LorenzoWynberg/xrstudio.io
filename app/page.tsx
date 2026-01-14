@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Nav,
   Footer,
@@ -11,120 +11,120 @@ import {
   Parallax,
   ClientLogos,
   Testimonials,
-} from "./components";
+} from './components';
 
 const services = [
   {
-    title: "Experience Execution",
-    description: "End-to-end production management for live events that demand precision.",
-    icon: "01",
-    href: "/services/experience-execution",
+    title: 'Experience Execution',
+    description: 'End-to-end production management for live events that demand precision.',
+    icon: '01',
+    href: '/services/experience-execution',
   },
   {
-    title: "Technical & Stage Design",
-    description: "Audio, lighting, video, and stage infrastructure engineered for impact.",
-    icon: "02",
-    href: "/services/technical-stage-design",
+    title: 'Technical & Stage Design',
+    description: 'Audio, lighting, video, and stage infrastructure engineered for impact.',
+    icon: '02',
+    href: '/services/technical-stage-design',
   },
   {
-    title: "On-Site Operations",
-    description: "Crew coordination, logistics, and real-time decision making.",
-    icon: "03",
-    href: "/services/on-site-operations",
+    title: 'On-Site Operations',
+    description: 'Crew coordination, logistics, and real-time decision making.',
+    icon: '03',
+    href: '/services/on-site-operations',
   },
   {
-    title: "Audiovisual Production",
+    title: 'Audiovisual Production',
     description: "Content capture and post-production that extends your event's reach.",
-    icon: "04",
-    href: "/services/audiovisual-production",
+    icon: '04',
+    href: '/services/audiovisual-production',
   },
   {
-    title: "Performance & Feedback",
-    description: "Data-driven reporting and optimization for continuous improvement.",
-    icon: "05",
-    href: "/services/performance-feedback",
+    title: 'Performance & Feedback',
+    description: 'Data-driven reporting and optimization for continuous improvement.',
+    icon: '05',
+    href: '/services/performance-feedback',
   },
 ];
 
 const featuredWork = [
   {
-    name: "Electric Animals",
-    category: "Festival Production",
-    image: "/images/_a1a6014.webp",
-    slug: "electric-animals",
+    name: 'Electric Animals',
+    category: 'Festival Production',
+    image: '/images/_a1a6014.webp',
+    slug: 'electric-animals',
   },
   {
-    name: "Blockchain Jungle",
-    category: "Conference Execution",
-    image: "/images/bcjungle-19.webp",
-    slug: "blockchain-jungle",
+    name: 'Blockchain Jungle',
+    category: 'Conference Execution',
+    image: '/images/bcjungle-19.webp',
+    slug: 'blockchain-jungle',
   },
   {
-    name: "Sweetspot",
-    category: "Esports Operations",
-    image: "/images/ss_img_0083.webp",
-    slug: "sweetspot",
+    name: 'Sweetspot',
+    category: 'Esports Operations',
+    image: '/images/ss_img_0083.webp',
+    slug: 'sweetspot',
   },
 ];
 
 const processSteps = [
-  { number: "01", title: "Blueprint", subtitle: "Review" },
-  { number: "02", title: "Production", subtitle: "Planning" },
-  { number: "03", title: "Live", subtitle: "Execution" },
-  { number: "04", title: "Reporting", subtitle: "& Optimization" },
+  { number: '01', title: 'Blueprint', subtitle: 'Review' },
+  { number: '02', title: 'Production', subtitle: 'Planning' },
+  { number: '03', title: 'Live', subtitle: 'Execution' },
+  { number: '04', title: 'Reporting', subtitle: '& Optimization' },
 ];
 
 const stats = [
-  { value: "50+", label: "Events Executed" },
-  { value: "100K+", label: "Attendees Reached" },
-  { value: "5", label: "Countries" },
-  { value: "99%", label: "Client Satisfaction" },
+  { value: '50+', label: 'Events Executed' },
+  { value: '100K+', label: 'Attendees Reached' },
+  { value: '5', label: 'Countries' },
+  { value: '99%', label: 'Client Satisfaction' },
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-black">
       <Nav />
 
       {/* Hero Section - Headline Focus with Animated BG */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
         {/* Background Image Carousel */}
         <HeroSlider />
 
         {/* Gradient overlays for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 z-10" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/50 to-black" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
 
         {/* Grid pattern overlay */}
-        <div className="absolute inset-0 grid-pattern opacity-20 z-10" />
+        <div className="grid-pattern absolute inset-0 z-10 opacity-20" />
 
         {/* Gradient orbs */}
         <div className="gradient-orb -top-40 -left-40 z-10" />
-        <div className="gradient-orb gradient-orb-2 -bottom-40 -right-40 z-10" />
+        <div className="gradient-orb gradient-orb-2 -right-40 -bottom-40 z-10" />
 
         {/* Main Content - Centered Headlines */}
-        <div className="relative z-20 max-w-[1400px] mx-auto px-6 text-center">
+        <div className="relative z-20 mx-auto max-w-[1400px] px-6 text-center">
           <div className="reveal">
-            <span className="section-label inline-block mb-8">
-              Production & Experience Engine
-            </span>
+            <span className="section-label mb-8 inline-block">Production & Experience Engine</span>
           </div>
 
-          <h1 className="text-hero mb-8 reveal reveal-delay-1">
+          <h1 className="text-hero reveal reveal-delay-1 mb-8">
             <span className="block text-white">XR</span>
-            <span className="block gradient-text-animated">STUDIO</span>
+            <span className="gradient-text-animated block">STUDIO</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-[#888] max-w-2xl mx-auto mb-12 reveal reveal-delay-2">
-            Execute with <span className="text-white">precision</span>, <span className="text-white">control</span>, and <span className="text-[#00ff88]">international standards</span>.
+          <p className="reveal reveal-delay-2 mx-auto mb-12 max-w-2xl text-xl text-[#888] md:text-2xl">
+            Execute with <span className="text-white">precision</span>,{' '}
+            <span className="text-white">control</span>, and{' '}
+            <span className="text-[#00ff88]">international standards</span>.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 reveal reveal-delay-3">
+          <div className="reveal reveal-delay-3 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link href="/contact" className="btn-primary group">
               <span className="flex items-center gap-2">
                 Start a Project
                 <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -143,19 +143,18 @@ export default function Home() {
             </Link>
           </div>
         </div>
-
       </section>
 
       {/* Stats Strip */}
       <section className="relative border-y border-[#1a1a1a] bg-[#0a0a0a]">
-        <div className="max-w-[1400px] mx-auto px-6 py-20">
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-12">
+        <div className="mx-auto max-w-[1400px] px-6 py-20">
+          <StaggerContainer className="grid grid-cols-2 gap-12 md:grid-cols-4">
             {stats.map((stat, i) => (
-              <div key={i} className="text-center group">
+              <div key={i} className="group text-center">
                 <div className="stat-number transition-transform group-hover:scale-105">
                   {stat.value}
                 </div>
-                <div className="text-small text-[#555] uppercase tracking-[0.15em] mt-2 font-mono">
+                <div className="text-small mt-2 font-mono tracking-[0.15em] text-[#555] uppercase">
                   {stat.label}
                 </div>
               </div>
@@ -168,22 +167,22 @@ export default function Home() {
       <ClientLogos />
 
       {/* What We Do */}
-      <section className="py-32 px-6 relative">
+      <section className="relative px-6 py-32">
         <div className="gradient-orb gradient-orb-2 -top-40 -right-40" />
-        <div className="max-w-[1400px] mx-auto relative z-10">
+        <div className="relative z-10 mx-auto max-w-[1400px]">
           <ScrollReveal>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
+            <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between">
               <div>
-                <span className="section-label block mb-4">What We Do</span>
+                <span className="section-label mb-4 block">What We Do</span>
                 <h2 className="text-h2">Services</h2>
               </div>
               <Link
                 href="/services"
-                className="text-[#555] hover:text-[#00ff88] transition-colors mt-4 md:mt-0 group flex items-center gap-2 text-small"
+                className="group text-small mt-4 flex items-center gap-2 text-[#555] transition-colors hover:text-[#00ff88] md:mt-0"
               >
                 View all services
                 <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -199,26 +198,24 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <StaggerContainer className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, i) => (
               <Link
                 key={i}
                 href={service.href}
-                className="group p-8 bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#00ff88] transition-all duration-300"
+                className="group border border-[#1a1a1a] bg-[#0a0a0a] p-8 transition-all duration-300 hover:border-[#00ff88]"
               >
-                <span className="text-[#00ff88] font-mono text-4xl font-bold opacity-20 group-hover:opacity-100 transition-opacity">
+                <span className="font-mono text-4xl font-bold text-[#00ff88] opacity-20 transition-opacity group-hover:opacity-100">
                   {service.icon}
                 </span>
-                <h3 className="text-h3 mt-4 mb-3 group-hover:text-[#00ff88] transition-colors">
+                <h3 className="text-h3 mt-4 mb-3 transition-colors group-hover:text-[#00ff88]">
                   {service.title}
                 </h3>
-                <p className="text-small text-[#888] leading-relaxed">
-                  {service.description}
-                </p>
-                <div className="mt-6 flex items-center gap-2 text-small text-[#555] group-hover:text-[#00ff88] transition-colors">
+                <p className="text-small leading-relaxed text-[#888]">{service.description}</p>
+                <div className="text-small mt-6 flex items-center gap-2 text-[#555] transition-colors group-hover:text-[#00ff88]">
                   <span>Learn more</span>
                   <svg
-                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -238,22 +235,22 @@ export default function Home() {
       </section>
 
       {/* Featured Work - Asymmetric Collage Layout */}
-      <section className="py-32 px-6 bg-[#050505] relative">
+      <section className="relative bg-[#050505] px-6 py-32">
         <div className="gradient-orb top-1/2 -left-40 -translate-y-1/2" />
-        <div className="max-w-[1400px] mx-auto relative z-10">
+        <div className="relative z-10 mx-auto max-w-[1400px]">
           <ScrollReveal>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
+            <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between">
               <div>
-                <span className="section-label block mb-4">Featured Work</span>
+                <span className="section-label mb-4 block">Featured Work</span>
                 <h2 className="text-h2">Case Studies</h2>
               </div>
               <Link
                 href="/work"
-                className="text-[#555] hover:text-[#00ff88] transition-colors mt-4 md:mt-0 group flex items-center gap-2 text-small"
+                className="group text-small mt-4 flex items-center gap-2 text-[#555] transition-colors hover:text-[#00ff88] md:mt-0"
               >
                 Explore all work
                 <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -270,12 +267,12 @@ export default function Home() {
           </ScrollReveal>
 
           {/* Asymmetric Grid Layout */}
-          <div className="grid lg:grid-cols-12 gap-4">
+          <div className="grid gap-4 lg:grid-cols-12">
             {/* Large featured image - left */}
             <ScrollReveal className="lg:col-span-7" direction="left">
               <Link
                 href="/work/electric-animals"
-                className="group relative block h-full min-h-[500px] lg:min-h-[600px] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+                className="group relative block h-full min-h-[500px] overflow-hidden border border-[#1a1a1a] transition-colors hover:border-[#00ff88] lg:min-h-[600px]"
               >
                 <Image
                   src="/images/electric-animals-foto-carlcox.webp"
@@ -284,12 +281,12 @@ export default function Home() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-10 z-10">
+                <div className="absolute right-0 bottom-0 left-0 z-10 p-8 lg:p-10">
                   <span className="section-label text-xs">Festival Production</span>
-                  <h3 className="text-h3 mt-2 group-hover:text-[#00ff88] transition-colors">
+                  <h3 className="text-h3 mt-2 transition-colors group-hover:text-[#00ff88]">
                     Electric Animals
                   </h3>
-                  <p className="text-small text-[#888] mt-2 max-w-md">
+                  <p className="text-small mt-2 max-w-md text-[#888]">
                     Full-scale festival production featuring international artists
                   </p>
                 </div>
@@ -297,11 +294,11 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Stacked images - right */}
-            <div className="lg:col-span-5 flex flex-col gap-4">
+            <div className="flex flex-col gap-4 lg:col-span-5">
               <ScrollReveal direction="right">
                 <Link
                   href="/work/blockchain-jungle"
-                  className="group relative block aspect-[16/10] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+                  className="group relative block aspect-[16/10] overflow-hidden border border-[#1a1a1a] transition-colors hover:border-[#00ff88]"
                 >
                   <Image
                     src="/images/blockchain-jungle-fotos-bj-1-of-1-3.webp"
@@ -310,9 +307,9 @@ export default function Home() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                  <div className="absolute right-0 bottom-0 left-0 z-10 p-6">
                     <span className="section-label text-xs">Conference</span>
-                    <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                    <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-[#00ff88]">
                       Blockchain Jungle
                     </h3>
                   </div>
@@ -322,7 +319,7 @@ export default function Home() {
               <ScrollReveal direction="right" delay={100}>
                 <Link
                   href="/work/magflow"
-                  className="group relative block aspect-[16/10] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+                  className="group relative block aspect-[16/10] overflow-hidden border border-[#1a1a1a] transition-colors hover:border-[#00ff88]"
                 >
                   <Image
                     src="/images/magflow-jacobcollier-fotos-jacob-1-of-1-10.webp"
@@ -331,9 +328,9 @@ export default function Home() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                  <div className="absolute right-0 bottom-0 left-0 z-10 p-6">
                     <span className="section-label text-xs">Concert Production</span>
-                    <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                    <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-[#00ff88]">
                       Magflow — Jacob Collier
                     </h3>
                   </div>
@@ -343,10 +340,10 @@ export default function Home() {
           </div>
 
           {/* Additional row */}
-          <StaggerContainer className="grid md:grid-cols-3 gap-4 mt-4">
+          <StaggerContainer className="mt-4 grid gap-4 md:grid-cols-3">
             <Link
               href="/work/sweetspot"
-              className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+              className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] transition-colors hover:border-[#00ff88]"
             >
               <Image
                 src="/images/ss_img_0083.webp"
@@ -355,9 +352,9 @@ export default function Home() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+              <div className="absolute right-0 bottom-0 left-0 z-10 p-6">
                 <span className="section-label text-xs">Esports</span>
-                <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-[#00ff88]">
                   Sweetspot
                 </h3>
               </div>
@@ -365,7 +362,7 @@ export default function Home() {
 
             <Link
               href="/work/pura-tinta-fest"
-              className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+              className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] transition-colors hover:border-[#00ff88]"
             >
               <Image
                 src="/images/pura-tinta-fotos-puratintajpg4.webp"
@@ -374,9 +371,9 @@ export default function Home() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+              <div className="absolute right-0 bottom-0 left-0 z-10 p-6">
                 <span className="section-label text-xs">Event Production</span>
-                <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-[#00ff88]">
                   Pura Tinta
                 </h3>
               </div>
@@ -384,7 +381,7 @@ export default function Home() {
 
             <Link
               href="/work/electric-animals"
-              className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+              className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] transition-colors hover:border-[#00ff88]"
             >
               <Image
                 src="/images/electric-animals-foto-oneiro2025.webp"
@@ -393,9 +390,9 @@ export default function Home() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+              <div className="absolute right-0 bottom-0 left-0 z-10 p-6">
                 <span className="section-label text-xs">Festival</span>
-                <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-[#00ff88]">
                   Oneiro 2025
                 </h3>
               </div>
@@ -405,35 +402,37 @@ export default function Home() {
       </section>
 
       {/* How We Work */}
-      <section className="py-32 px-6 relative overflow-hidden">
-        <div className="gradient-orb gradient-orb-3 bottom-0 right-0" />
-        <div className="max-w-[1400px] mx-auto relative z-10">
+      <section className="relative overflow-hidden px-6 py-32">
+        <div className="gradient-orb gradient-orb-3 right-0 bottom-0" />
+        <div className="relative z-10 mx-auto max-w-[1400px]">
           <ScrollReveal>
-            <div className="text-center mb-20">
-              <span className="section-label block mb-4">Our Process</span>
+            <div className="mb-20 text-center">
+              <span className="section-label mb-4 block">Our Process</span>
               <h2 className="text-h2">How We Work</h2>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-md md:max-w-2xl lg:max-w-5xl mx-auto">
+          <div className="mx-auto grid max-w-md grid-cols-2 gap-8 md:max-w-2xl lg:max-w-5xl lg:grid-cols-4">
             {processSteps.map((step, i) => (
               <StaggerContainer key={i} className="group relative">
-                <div className="p-6 border border-[#1a1a1a] hover:border-[#00ff88] transition-all duration-300 bg-[#0a0a0a]/50 hover:bg-[#0a0a0a]">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-[#00ff88] font-mono text-sm">{step.number}</span>
-                    <div className="flex-1 h-px bg-gradient-to-r from-[#00ff88]/50 to-transparent" />
+                <div className="border border-[#1a1a1a] bg-[#0a0a0a]/50 p-6 transition-all duration-300 hover:border-[#00ff88] hover:bg-[#0a0a0a]">
+                  <div className="mb-4 flex items-center gap-3">
+                    <span className="font-mono text-sm text-[#00ff88]">{step.number}</span>
+                    <div className="h-px flex-1 bg-gradient-to-r from-[#00ff88]/50 to-transparent" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#00ff88] transition-colors">{step.title}</h3>
+                  <h3 className="mb-2 text-xl font-semibold text-white transition-colors group-hover:text-[#00ff88]">
+                    {step.title}
+                  </h3>
                   <p className="text-sm text-[#666]">{step.subtitle}</p>
                 </div>
                 {i < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-[#1a1a1a]" />
+                  <div className="absolute top-1/2 -right-3 hidden h-px w-6 bg-[#1a1a1a] lg:block" />
                 )}
               </StaggerContainer>
             ))}
           </div>
 
-          <ScrollReveal className="text-center mt-16">
+          <ScrollReveal className="mt-16 text-center">
             <Link href="/process" className="btn-secondary">
               Learn About Our Process
             </Link>
@@ -445,7 +444,7 @@ export default function Home() {
       <Testimonials />
 
       {/* Ecosystem Section */}
-      <section className="py-32 px-6 relative overflow-hidden">
+      <section className="relative overflow-hidden px-6 py-32">
         <div className="absolute inset-0">
           <Image
             src="/images/electric-animals-foto-carlcox.webp"
@@ -455,22 +454,22 @@ export default function Home() {
           />
         </div>
         <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
           <ScrollReveal>
-            <span className="section-label block mb-6">Ecosystem</span>
+            <span className="section-label mb-6 block">Ecosystem</span>
             <h2 className="text-h2 mb-8 leading-tight">
-              <span className="bg-[#00ff88] text-black px-4 py-2 inline-block">
+              <span className="inline-block bg-[#00ff88] px-4 py-2 text-black">
                 Strategy designed by Broccoli.
               </span>
               <br />
-              <span className="bg-[#00ff88] text-black px-4 py-2 inline-block mt-2">
+              <span className="mt-2 inline-block bg-[#00ff88] px-4 py-2 text-black">
                 Executed by XR Studio.
               </span>
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-2xl mx-auto text-white">
-              We operate as the execution arm within a larger strategic ecosystem.
-              Broccoli designs the system and strategy. XR Studio brings it to life
-              with operational precision and technical excellence.
+            <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-white">
+              We operate as the execution arm within a larger strategic ecosystem. Broccoli designs
+              the system and strategy. XR Studio brings it to life with operational precision and
+              technical excellence.
             </p>
             <Link href="/about" className="btn-secondary">
               Learn About Our Ecosystem
@@ -480,16 +479,17 @@ export default function Home() {
       </section>
 
       {/* CTA Footer Band */}
-      <section className="py-32 px-6 relative overflow-hidden">
+      <section className="relative overflow-hidden px-6 py-32">
         <div className="gradient-orb top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute inset-0 grid-pattern opacity-20" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
+        <div className="grid-pattern absolute inset-0 opacity-20" />
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
           <ScrollReveal>
             <h2 className="text-h1 mb-8">
-              Execute with<br />
+              Execute with
+              <br />
               <span className="gradient-text-animated">confidence.</span>
             </h2>
-            <p className="text-body-lg mb-10 max-w-xl mx-auto">
+            <p className="text-body-lg mx-auto mb-10 max-w-xl">
               Ready to bring precision and control to your next live experience?
             </p>
             <Link href="/contact" className="btn-primary">

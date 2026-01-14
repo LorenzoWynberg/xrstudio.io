@@ -16,7 +16,7 @@ async function getImageFiles(dir, baseDir = dir) {
   for (const entry of entries) {
     const fullPath = join(dir, entry.name);
     if (entry.isDirectory()) {
-      files.push(...await getImageFiles(fullPath, baseDir));
+      files.push(...(await getImageFiles(fullPath, baseDir)));
     } else if (/\.(jpg|jpeg|png|webp|gif)$/i.test(entry.name) && !entry.name.startsWith('.')) {
       files.push(fullPath);
     }
@@ -43,9 +43,18 @@ async function optimizeImages() {
     const { name, dir } = parse(inputPath);
     // Create subfolder prefix from relative path
     const relDir = relative(INPUT_DIR, dir);
-    const prefix = relDir ? relDir.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-_/]/g, '').replace(/\//g, '-') + '-' : '';
+    const prefix = relDir
+      ? relDir
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^a-z0-9-_/]/g, '')
+          .replace(/\//g, '-') + '-'
+      : '';
     // Sanitize filename: lowercase, replace spaces with hyphens
-    const safeName = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-_]/g, '');
+    const safeName = name
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9-_]/g, '');
     const outputPath = join(OUTPUT_DIR, `${prefix}${safeName}.webp`);
     const displayName = relative(INPUT_DIR, inputPath);
 
@@ -62,22 +71,24 @@ async function optimizeImages() {
         pipeline = pipeline.resize(MAX_WIDTH, null, { withoutEnlargement: true });
       }
 
-      const { size } = await pipeline
-        .webp({ quality: QUALITY })
-        .toFile(outputPath);
+      const { size } = await pipeline.webp({ quality: QUALITY }).toFile(outputPath);
 
       totalOptimized += size;
       const savings = ((1 - size / originalSize) * 100).toFixed(1);
 
       console.log(`✓ ${displayName}`);
-      console.log(`  ${(originalSize / 1024 / 1024).toFixed(2)}MB → ${(size / 1024).toFixed(0)}KB (${savings}% smaller)\n`);
+      console.log(
+        `  ${(originalSize / 1024 / 1024).toFixed(2)}MB → ${(size / 1024).toFixed(0)}KB (${savings}% smaller)\n`
+      );
     } catch (err) {
       console.error(`✗ ${displayName}: ${err.message}\n`);
     }
   }
 
   console.log('─'.repeat(50));
-  console.log(`Total: ${(totalOriginal / 1024 / 1024).toFixed(1)}MB → ${(totalOptimized / 1024 / 1024).toFixed(1)}MB`);
+  console.log(
+    `Total: ${(totalOriginal / 1024 / 1024).toFixed(1)}MB → ${(totalOptimized / 1024 / 1024).toFixed(1)}MB`
+  );
   console.log(`Saved: ${((1 - totalOptimized / totalOriginal) * 100).toFixed(1)}%`);
   console.log(`\nOptimized images saved to ${OUTPUT_DIR}`);
 }

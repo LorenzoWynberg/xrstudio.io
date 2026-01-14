@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 const clients = [
-  { name: "Bose", logo: "/images/logo-bose.webp" },
-  { name: "Loop", logo: "/images/loop.webp" },
-  { name: "Fabrik", logo: "/images/fabrik.webp" },
-  { name: "Oneiro", logo: "/images/oneiro.webp" },
-  { name: "Code", logo: "/images/code.webp" },
+  { name: 'Bose', logo: '/images/logo-bose.webp' },
+  { name: 'Loop', logo: '/images/loop.webp' },
+  { name: 'Fabrik', logo: '/images/fabrik.webp' },
+  { name: 'Oneiro', logo: '/images/oneiro.webp' },
+  { name: 'Code', logo: '/images/code.webp' },
 ];
 
 export function ClientLogos() {
@@ -15,11 +15,11 @@ export function ClientLogos() {
   const doubledClients = [...clients, ...clients];
 
   return (
-    <section className="py-16 border-y border-[#1a1a1a] bg-black relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10 pointer-events-none" />
+    <section className="relative overflow-hidden border-y border-[#1a1a1a] bg-black py-16">
+      <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-black via-transparent to-black" />
 
-      <div className="max-w-7xl mx-auto px-6 mb-8">
-        <p className="text-[#888] text-sm uppercase tracking-wider text-center">
+      <div className="mx-auto mb-8 max-w-7xl px-6">
+        <p className="text-center text-sm tracking-wider text-[#888] uppercase">
           Trusted by industry leaders
         </p>
       </div>
@@ -29,14 +29,14 @@ export function ClientLogos() {
           {doubledClients.map((client, i) => (
             <div
               key={`${client.name}-${i}`}
-              className="flex items-center justify-center mx-12 min-w-[120px] grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              className="mx-12 flex min-w-[120px] items-center justify-center opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
             >
               <Image
                 src={client.logo}
                 alt={client.name}
                 width={100}
                 height={40}
-                className="object-contain h-10 w-auto"
+                className="h-10 w-auto object-contain"
               />
             </div>
           ))}
@@ -49,23 +49,23 @@ export function ClientLogos() {
 // Static grid version
 export function ClientLogosGrid() {
   return (
-    <section className="py-20 px-6 border-y border-[#1a1a1a] bg-[#050505]">
-      <div className="max-w-7xl mx-auto">
-        <p className="text-[#888] text-sm uppercase tracking-wider text-center mb-12">
+    <section className="border-y border-[#1a1a1a] bg-[#050505] px-6 py-20">
+      <div className="mx-auto max-w-7xl">
+        <p className="mb-12 text-center text-sm tracking-wider text-[#888] uppercase">
           Trusted by industry leaders
         </p>
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-3 items-center justify-items-center gap-8 md:grid-cols-5">
           {clients.map((client) => (
             <div
               key={client.name}
-              className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              className="opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
             >
               <Image
                 src={client.logo}
                 alt={client.name}
                 width={100}
                 height={40}
-                className="object-contain h-10 w-auto"
+                className="h-10 w-auto object-contain"
               />
             </div>
           ))}

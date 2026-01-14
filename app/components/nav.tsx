@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export function Nav() {
   const pathname = usePathname();
@@ -13,61 +13,51 @@ export function Nav() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const links = [
-    { href: "/services", label: "Services" },
-    { href: "/work", label: "Work" },
-    { href: "/process", label: "Process" },
-    { href: "/about", label: "About" },
+    { href: '/services', label: 'Services' },
+    { href: '/work', label: 'Work' },
+    { href: '/process', label: 'Process' },
+    { href: '/about', label: 'About' },
   ];
 
   return (
     <nav
       className={`nav-sticky transition-all duration-300 ${
-        isScrolled ? "scrolled" : "bg-transparent"
+        isScrolled ? 'scrolled' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link
-          href="/"
-          className="text-xl font-bold tracking-tight group"
-        >
-          <span className="group-hover:text-[#00ff88] transition-colors">XR</span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <Link href="/" className="group text-xl font-bold tracking-tight">
+          <span className="transition-colors group-hover:text-[#00ff88]">XR</span>
           <span className="text-[#00ff88]">.</span>
-          <span className="group-hover:text-[#00ff88] transition-colors">STUDIO</span>
+          <span className="transition-colors group-hover:text-[#00ff88]">STUDIO</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors underline-hover ${
-                pathname.startsWith(link.href)
-                  ? "text-white"
-                  : "text-[#888] hover:text-white"
+              className={`underline-hover text-sm transition-colors ${
+                pathname.startsWith(link.href) ? 'text-white' : 'text-[#888] hover:text-white'
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn-primary text-sm py-2 px-4">
+          <Link href="/contact" className="btn-primary px-4 py-2 text-sm">
             Contact
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white p-2">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+        <button className="p-2 text-white md:hidden">
+          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
