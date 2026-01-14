@@ -96,7 +96,7 @@ export function TechBackground() {
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
           ctx.strokeStyle = `rgba(0, 255, 136, ${opacity})`;
-          ctx.lineWidth = 0.5;
+          ctx.lineWidth = 1.5;
           ctx.stroke();
         }
       }

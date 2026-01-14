@@ -364,7 +364,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="/work/pura-tinta"
+              href="/work/pura-tinta-fest"
               className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
             >
               <Image
@@ -383,7 +383,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="/work/oneiro"
+              href="/work/electric-animals"
               className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
             >
               <Image
@@ -415,25 +415,17 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid md:grid-cols-4 gap-8">
+          <div className="flex justify-center items-start gap-4 md:gap-0">
             {processSteps.map((step, i) => (
-              <div key={i} className="relative group">
-                <div className="text-8xl font-bold text-[#111] group-hover:text-[#1a1a1a] transition-colors">
+              <StaggerContainer key={i} className="flex-1 max-w-[200px] text-center px-4">
+                <div className="text-6xl md:text-7xl font-bold text-[#00ff88] mb-4">
                   {step.number}
                 </div>
-                <div className="absolute top-8 left-4">
-                  <div className="w-2 h-2 bg-[#00ff88] mb-4" />
-                  <h3 className="text-h3">{step.title}</h3>
-                  <p className="text-small text-[#555]">{step.subtitle}</p>
-                </div>
-                {i < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-12 left-full w-full">
-                    <div className="h-px bg-gradient-to-r from-[#1a1a1a] to-transparent" />
-                  </div>
-                )}
-              </div>
+                <h3 className="text-lg font-semibold text-white mb-1">{step.title}</h3>
+                <p className="text-sm text-[#666]">{step.subtitle}</p>
+              </StaggerContainer>
             ))}
-          </StaggerContainer>
+          </div>
 
           <ScrollReveal className="text-center mt-16">
             <Link href="/process" className="btn-secondary">
