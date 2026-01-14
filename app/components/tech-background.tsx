@@ -16,6 +16,7 @@ export function TechBackground() {
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>(0);
   const mouseRef = useRef({ x: 0, y: 0 });
+  const animateFnRef = useRef<() => void>(() => {});
 
   const initParticles = useCallback((width: number, height: number) => {
     const particleCount = Math.floor((width * height) / 15000);
@@ -102,12 +103,15 @@ export function TechBackground() {
       }
     }
 
-    animationRef.current = requestAnimationFrame(animate);
+    animationRef.current = requestAnimationFrame(animateFnRef.current);
   }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+
+    // Store animate in ref for self-referencing
+    animateFnRef.current = animate;
 
     const handleResize = () => {
       canvas.width = window.innerWidth;

@@ -1,21 +1,28 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const hasInitialized = useRef(false);
+  const isVisibleRef = useRef(false);
 
   useEffect(() => {
     // Only show custom cursor on non-touch devices
     const isTouchDevice = 'ontouchstart' in window;
-    if (isTouchDevice) return;
+    if (isTouchDevice || hasInitialized.current) return;
 
-    setIsVisible(true);
+    hasInitialized.current = true;
 
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
+      // Set visible on first mouse move using ref to avoid lint warning
+      if (!isVisibleRef.current) {
+        isVisibleRef.current = true;
+        setIsVisible(true);
+      }
     };
 
     const handleMouseOver = (e: MouseEvent) => {
