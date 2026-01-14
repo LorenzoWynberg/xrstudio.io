@@ -202,9 +202,9 @@ body {
   background-size: 60px 60px;
 }
 
-/* Hero gradient background */
+/* Hero gradient background - green only */
 .hero-gradient {
-  background: linear-gradient(135deg, rgba(0,255,136,0.1) 0%, transparent 50%, rgba(0,180,255,0.1) 100%);
+  background: linear-gradient(135deg, rgba(0,255,136,0.08) 0%, transparent 50%, rgba(0,255,136,0.05) 100%);
 }
 
 /* Section gradient */
@@ -234,14 +234,15 @@ body {
   pointer-events: none;
 }
 
+/* All orbs green - monochromatic */
 .gradient-orb-2 {
-  background: radial-gradient(circle, rgba(0,180,255,0.35) 0%, rgba(0,180,255,0.1) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(0,255,136,0.25) 0%, rgba(0,255,136,0.08) 40%, transparent 70%);
   animation-delay: -10s;
   animation-duration: 25s;
 }
 
 .gradient-orb-3 {
-  background: radial-gradient(circle, rgba(138,43,226,0.3) 0%, rgba(138,43,226,0.08) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(0,255,136,0.2) 0%, rgba(0,255,136,0.05) 40%, transparent 70%);
   animation-delay: -5s;
   animation-duration: 30s;
 }
@@ -390,7 +391,7 @@ body {
   content: '';
   position: absolute;
   inset: -1px;
-  background: linear-gradient(135deg, #00ff88, #00b4ff, #8a2be2, #00ff88);
+  background: linear-gradient(135deg, #00ff88, #00cc6a, #00ff88, #00cc6a);
   background-size: 300% 300%;
   z-index: -1;
   opacity: 0;
@@ -455,7 +456,7 @@ body {
     90deg,
     #fff 0%,
     #00ff88 25%,
-    #00b4ff 50%,
+    #00cc6a 50%,
     #00ff88 75%,
     #fff 100%
   );
@@ -767,7 +768,7 @@ body {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #00ff88, #00b4ff, #8a2be2);
+  background: linear-gradient(90deg, #00ff88, #00cc6a, #00ff88);
   z-index: 10000;
   animation: loading 2s ease-in-out infinite;
 }
@@ -806,7 +807,7 @@ body {
 
 .glitch::after {
   animation: glitch-2 0.3s infinite linear alternate-reverse;
-  color: #00b4ff;
+  color: #00cc6a;
   z-index: -2;
 }
 
