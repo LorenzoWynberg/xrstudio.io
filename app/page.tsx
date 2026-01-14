@@ -446,15 +446,15 @@ export default function Home() {
 
       {/* Ecosystem Section */}
       <section className="py-32 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15">
+        <div className="absolute inset-0">
           <Image
-            src="/images/blockchain-jungle-fotos-bj-1-of-1-3.webp"
+            src="/images/electric-animals-foto-carlcox.webp"
             alt=""
             fill
             className="object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollReveal>
             <span className="section-label block mb-6">Ecosystem</span>
