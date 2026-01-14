@@ -58,6 +58,7 @@ pnpm lint         # Run ESLint
 2026-01-14 00:50 - Added Activity Log section to CLAUDE.md
 2026-01-14 00:55 - Changed Ecosystem section bg image and reduced overlay opacity (80% → 60%)
 2026-01-14 00:58 - Updated Ecosystem text colors: XR Studio white, Broccoli light gray
+2026-01-14 01:00 - Added green highlight effect to Ecosystem headline with white text for brand names
 ```
 
 ## Changelog (by version/date)

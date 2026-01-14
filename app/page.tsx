@@ -459,8 +459,13 @@ export default function Home() {
           <ScrollReveal>
             <span className="section-label block mb-6">Ecosystem</span>
             <h2 className="text-h2 mb-8 leading-tight">
-              Strategy designed by <span className="text-[#ccc]">Broccoli</span>.<br />
-              Executed by <span className="text-white">XR Studio</span>.
+              <span className="bg-[#00ff88] text-black px-4 py-2 inline-block">
+                Strategy designed by <span className="text-white">Broccoli</span>.
+              </span>
+              <br />
+              <span className="bg-[#00ff88] text-black px-4 py-2 inline-block mt-2">
+                Executed by <span className="text-white">XR Studio</span>.
+              </span>
             </h2>
             <p className="text-body-lg mb-10 max-w-2xl mx-auto">
               We operate as the execution arm within a larger strategic ecosystem.
