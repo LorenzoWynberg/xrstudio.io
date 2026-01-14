@@ -487,7 +487,7 @@ export default function Home() {
           <ScrollReveal>
             <h2 className="text-h1 mb-8">
               Execute with<br />
-              <span className="gradient-text-animated">confidence</span>.
+              <span className="gradient-text-animated">confidence.</span>
             </h2>
             <p className="text-body-lg mb-10 max-w-xl mx-auto">
               Ready to bring precision and control to your next live experience?
