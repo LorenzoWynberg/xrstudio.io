@@ -4,6 +4,8 @@ All notable changes to this project, grouped by date.
 
 ## 2026-01-14
 
+- **React hooks lint fixes**: Fixed setState-in-effect and self-referencing callback issues in cursor/background components
+- **Code quality tooling**: Added Prettier config, format/typecheck npm scripts
 - **Ecosystem section styling**: Green highlight headline, background image, white paragraph text
 - **Workflow rules update**: Clarified append-only changelog requirement in CLAUDE.md
 - **Ecosystem section**: Added subtle background image to differentiate from CTA section
