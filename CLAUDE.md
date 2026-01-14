@@ -63,6 +63,7 @@ pnpm lint         # Run ESLint
 2026-01-14 01:03 - Changed Ecosystem paragraph text to white
 2026-01-14 01:05 - Updated Ecosystem headline: Broccoli light gray (#444), XR Studio white
 2026-01-14 01:06 - Reverted Ecosystem headline to all black text
+2026-01-14 01:08 - Fixed Ecosystem paragraph to actually be white (removed text-body-lg override)
 ```
 
 ## Changelog (by version/date)

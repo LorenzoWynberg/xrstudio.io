@@ -467,7 +467,7 @@ export default function Home() {
                 Executed by XR Studio.
               </span>
             </h2>
-            <p className="text-body-lg mb-10 max-w-2xl mx-auto text-white">
+            <p className="text-lg leading-relaxed mb-10 max-w-2xl mx-auto text-white">
               We operate as the execution arm within a larger strategic ecosystem.
               Broccoli designs the system and strategy. XR Studio brings it to life
               with operational precision and technical excellence.
