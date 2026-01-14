@@ -415,11 +415,20 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="flex justify-center items-start gap-4 md:gap-0">
+          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {processSteps.map((step, i) => (
-              <StaggerContainer key={i} className="flex-1 max-w-[200px] text-center px-4">
-                <h3 className="text-lg font-semibold text-white mb-1">{step.title}</h3>
-                <p className="text-sm text-[#666]">{step.subtitle}</p>
+              <StaggerContainer key={i} className="group relative">
+                <div className="p-6 border border-[#1a1a1a] hover:border-[#00ff88] transition-all duration-300 bg-[#0a0a0a]/50 hover:bg-[#0a0a0a]">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-[#00ff88] font-mono text-sm">{step.number}</span>
+                    <div className="flex-1 h-px bg-gradient-to-r from-[#00ff88]/50 to-transparent" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#00ff88] transition-colors">{step.title}</h3>
+                  <p className="text-sm text-[#666]">{step.subtitle}</p>
+                </div>
+                {i < processSteps.length - 1 && (
+                  <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-[#1a1a1a]" />
+                )}
               </StaggerContainer>
             ))}
           </div>
