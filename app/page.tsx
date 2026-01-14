@@ -445,8 +445,16 @@ export default function Home() {
       <Testimonials />
 
       {/* Ecosystem Section */}
-      <section className="py-32 px-6 bg-[#050505] border-y border-[#1a1a1a] relative overflow-hidden">
-        <div className="gradient-orb gradient-orb-2 top-0 left-1/2 -translate-x-1/2" />
+      <section className="py-32 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-15">
+          <Image
+            src="/images/blockchain-jungle-fotos-bj-1-of-1-3.webp"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/80" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollReveal>
             <span className="section-label block mb-6">Ecosystem</span>
@@ -467,16 +475,9 @@ export default function Home() {
       </section>
 
       {/* CTA Footer Band */}
-      <section className="py-32 px-6 relative overflow-hidden bg-gradient-to-b from-[#050505] to-[#0a0a0a]">
-        <div className="absolute inset-0 opacity-20">
-          <Image
-            src="/images/blockchain-jungle-fotos-bj-1-of-1-3.webp"
-            alt=""
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/70" />
+      <section className="py-32 px-6 relative overflow-hidden">
+        <div className="gradient-orb top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute inset-0 grid-pattern opacity-20" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-h1 mb-8">

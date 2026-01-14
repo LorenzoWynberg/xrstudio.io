@@ -33,8 +33,23 @@ pnpm lint         # Run ESLint
 - **jj (jujutsu)**: Use jj as the primary version control tool (colocated with git)
 - **No Co-Authored-By**: Do not add "Co-Authored-By: Claude" to commit messages
 - **Atomic commits**: Keep commits small and focused on a single change
+- **Always push**: After committing, always push changes to remote
+
+## Workflow Rules
+
+- **Always update changelog**: Add all changes to the Changelog section below
+- **Always update docs**: Keep documentation in sync with code changes
+- **Commit frequently**: Make atomic commits after each logical change
+- **Push immediately**: Push after every commit
 
 ## Changelog (append-only)
+
+### 2026-01-14
+- **Process section redesign**: Card-based layout with hover effects, 2x2 grid on md, 4-col on lg
+- **Tech background lines**: Increased particle network line thickness (0.5 → 1.5)
+- **Fixed broken links**: `/work/pura-tinta` → `/work/pura-tinta-fest`, `/work/oneiro` → `/work/electric-animals`
+- **Hero slider**: Diversified images, replaced similar shots with Sweetspot
+- **Ecosystem section**: Added subtle background image to differentiate from CTA section
 
 ### 2026-01-13
 - **Hero redesign**: Centered headlines with image carousel background, removed scroll indicator
