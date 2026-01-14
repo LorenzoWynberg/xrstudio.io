@@ -7,9 +7,8 @@ const heroImages = [
   "/images/electric-animals-foto-carlcox.webp",
   "/images/magflow-jacobcollier-fotos-jacob-1-of-1-10.webp",
   "/images/blockchain-jungle-fotos-bj-1-of-1-3.webp",
-  "/images/electric-animals-foto-oneiro2025.webp",
+  "/images/ss_img_0128.webp",
   "/images/pura-tinta-fotos-puratintajpg4.webp",
-  "/images/electric-animals-foto-martinezbrothers.webp",
 ];
 
 export function HeroSlider() {
