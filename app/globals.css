@@ -11,6 +11,16 @@
   --card-bg: #0a0a0a;
   --card-border: #1a1a1a;
 
+  /* Typography scale - Apple-like */
+  --font-hero: clamp(4rem, 12vw, 10rem);
+  --font-h1: clamp(3rem, 8vw, 6rem);
+  --font-h2: clamp(2rem, 5vw, 4rem);
+  --font-h3: clamp(1.5rem, 3vw, 2rem);
+  --font-body-lg: 1.25rem;
+  --font-body: 1rem;
+  --font-small: 0.875rem;
+  --font-micro: 0.75rem;
+
   /* Dark theme as default */
   --background: #000000;
   --foreground: #ffffff;
@@ -93,6 +103,86 @@ body {
 ::selection {
   background: var(--xr-accent);
   color: var(--background);
+}
+
+/* ============================================
+   TYPOGRAPHY SYSTEM - Apple-like
+   ============================================ */
+
+/* Hero text - massive, impactful */
+.text-hero {
+  font-size: var(--font-hero);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+/* H1 - Page titles */
+.text-h1 {
+  font-size: var(--font-h1);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+/* H2 - Section headers */
+.text-h2 {
+  font-size: var(--font-h2);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* H3 - Card titles */
+.text-h3 {
+  font-size: var(--font-h3);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Body large - Intro paragraphs */
+.text-body-lg {
+  font-size: var(--font-body-lg);
+  line-height: 1.7;
+  color: var(--muted-foreground);
+}
+
+/* Body - Default text */
+.text-body {
+  font-size: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Small - Captions, meta */
+.text-small {
+  font-size: var(--font-small);
+  line-height: 1.5;
+}
+
+/* Micro - Labels, tags */
+.text-micro {
+  font-size: var(--font-micro);
+  line-height: 1.4;
+}
+
+/* Section labels - UPPERCASE, mono, green */
+.section-label {
+  font-family: var(--font-mono), monospace;
+  font-size: var(--font-micro);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--xr-accent);
+}
+
+/* Stat numbers - Extra bold, green, glow */
+.stat-number {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--xr-accent);
+  text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
 }
 
 /* Edgy gradient text */

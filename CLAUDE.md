@@ -33,3 +33,15 @@ pnpm lint         # Run ESLint
 - **jj (jujutsu)**: Use jj as the primary version control tool (colocated with git)
 - **No Co-Authored-By**: Do not add "Co-Authored-By: Claude" to commit messages
 - **Atomic commits**: Keep commits small and focused on a single change
+
+## Changelog (append-only)
+
+### 2026-01-13
+- **Hero redesign**: Centered headlines with image carousel background, removed scroll indicator
+- **Style guide implementation**: Created comprehensive design system at `docs/STYLE-GUIDE.md`
+- **Monochromatic green palette**: Removed all blue/purple colors, using #00ff88 and #00cc6a only
+- **Animated tech background**: Canvas-based particle network with mouse interaction (`app/components/tech-background.tsx`)
+- **Apple-like typography system**: Added responsive type scale (text-hero, text-h1, text-h2, text-h3, section-label, stat-number)
+- **Asymmetric collage layout**: Featured Work section with large left image + stacked right
+- **Image optimization**: Updated script to handle subdirectories, processed 103 images (948MB → 20MB)
+- **New project images**: Electric Animals, Blockchain Jungle, Magflow, Pura Tinta collections added

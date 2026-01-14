@@ -4,12 +4,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const heroImages = [
-  "/images/_a1a6014.webp",
-  "/images/bcjungle-19.webp",
-  "/images/img_3577.webp",
-  "/images/jacobcollier_21-09-25-01550.webp",
-  "/images/wua04032-enhanced-nr.webp",
-  "/images/ss_img_0083.webp",
+  "/images/electric-animals-foto-carlcox.webp",
+  "/images/magflow-jacobcollier-fotos-jacob-1-of-1-10.webp",
+  "/images/blockchain-jungle-fotos-bj-1-of-1-3.webp",
+  "/images/electric-animals-foto-oneiro2025.webp",
+  "/images/pura-tinta-fotos-puratintajpg4.webp",
+  "/images/electric-animals-foto-martinezbrothers.webp",
 ];
 
 export function HeroSlider() {
@@ -38,21 +38,16 @@ export function HeroSlider() {
           />
         </div>
       ))}
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-
       {/* Slide indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2 z-30">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 transition-all duration-300 ${
+            className={`h-1 transition-all duration-300 ${
               index === currentSlide
                 ? "w-8 bg-[#00ff88]"
-                : "bg-white/30 hover:bg-white/50"
+                : "w-2 bg-white/20 hover:bg-white/40"
             }`}
           />
         ))}

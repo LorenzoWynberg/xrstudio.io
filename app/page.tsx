@@ -86,44 +86,43 @@ export default function Home() {
     <div className="min-h-screen bg-black overflow-hidden">
       <Nav />
 
-      {/* Hero Section with Image Slider */}
-      <section className="relative min-h-screen flex items-center justify-center">
-        {/* Background Image Slider */}
+      {/* Hero Section - Headline Focus with Animated BG */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image Carousel */}
         <HeroSlider />
 
-        {/* Animated background orbs */}
+        {/* Gradient overlays for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 z-10" />
+
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 grid-pattern opacity-20 z-10" />
+
+        {/* Gradient orbs */}
         <div className="gradient-orb -top-40 -left-40 z-10" />
         <div className="gradient-orb gradient-orb-2 -bottom-40 -right-40 z-10" />
 
-        {/* Grid pattern */}
-        <div className="absolute inset-0 grid-pattern z-10" />
-
-        <div className="relative z-20 max-w-6xl mx-auto px-6 text-center pt-20">
+        {/* Main Content - Centered Headlines */}
+        <div className="relative z-20 max-w-[1400px] mx-auto px-6 text-center">
           <div className="reveal">
-            <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#00ff88]/30 bg-black/50 backdrop-blur-sm mb-8 shadow-[0_0_20px_rgba(0,255,136,0.2)]">
-              <span className="pulse-dot" />
-              <span className="text-[#00ff88] text-sm uppercase tracking-[0.2em] font-mono">
-                Production & Experience Engine
-              </span>
-            </div>
+            <span className="section-label inline-block mb-8">
+              Production & Experience Engine
+            </span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] mb-8 reveal reveal-delay-1">
-            <span className="block">XR</span>
+          <h1 className="text-hero mb-8 reveal reveal-delay-1">
+            <span className="block text-white">XR</span>
             <span className="block gradient-text-animated">STUDIO</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-[#ccc] max-w-2xl mx-auto mb-12 leading-relaxed reveal reveal-delay-2">
-            We execute complex live experiences with{" "}
-            <span className="text-white font-semibold">precision</span>,{" "}
-            <span className="text-white font-semibold">control</span>, and{" "}
-            <span className="text-[#00ff88] font-semibold">international standards</span>.
+          <p className="text-xl md:text-2xl text-[#888] max-w-2xl mx-auto mb-12 reveal reveal-delay-2">
+            Execute with <span className="text-white">precision</span>, <span className="text-white">control</span>, and <span className="text-[#00ff88]">international standards</span>.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 reveal reveal-delay-3">
-            <Link href="/contact" className="btn-primary group magnetic">
+            <Link href="/contact" className="btn-primary group">
               <span className="flex items-center gap-2">
-                Request a Production Call
+                Start a Project
                 <svg
                   className="w-4 h-4 transition-transform group-hover:translate-x-1"
                   fill="none"
@@ -139,37 +138,30 @@ export default function Home() {
                 </svg>
               </span>
             </Link>
-            <Link href="/work" className="btn-secondary magnetic">
+            <Link href="/work" className="btn-secondary">
               View Our Work
             </Link>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 reveal reveal-delay-4 z-20">
-          <span className="text-[#888] text-xs uppercase tracking-widest">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-[#00ff88] to-transparent animate-pulse" />
-        </div>
       </section>
 
       {/* Stats Strip */}
-      <section className="relative border-y border-[#00ff88]/20 bg-gradient-to-r from-black via-[#0a0a0a] to-black">
-        <div className="glow-line absolute top-0 left-0 right-0" />
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="relative border-y border-[#1a1a1a] bg-[#0a0a0a]">
+        <div className="max-w-[1400px] mx-auto px-6 py-20">
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat, i) => (
               <div key={i} className="text-center group">
-                <div className="text-5xl md:text-6xl font-bold text-[#00ff88] mb-2 glow-text transition-all group-hover:scale-110">
+                <div className="stat-number transition-transform group-hover:scale-105">
                   {stat.value}
                 </div>
-                <div className="text-sm text-[#888] uppercase tracking-wider">
+                <div className="text-small text-[#555] uppercase tracking-[0.15em] mt-2 font-mono">
                   {stat.label}
                 </div>
               </div>
             ))}
           </StaggerContainer>
         </div>
-        <div className="glow-line absolute bottom-0 left-0 right-0" />
       </section>
 
       {/* Client Logos */}
@@ -178,21 +170,16 @@ export default function Home() {
       {/* What We Do */}
       <section className="py-32 px-6 relative">
         <div className="gradient-orb gradient-orb-2 -top-40 -right-40" />
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <ScrollReveal>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
               <div>
-                <div className="accent-bar" />
-                <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
-                  What We Do
-                </p>
-                <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                  Services
-                </h2>
+                <span className="section-label block mb-4">What We Do</span>
+                <h2 className="text-h2">Services</h2>
               </div>
               <Link
                 href="/services"
-                className="text-[#888] hover:text-[#00ff88] transition-colors mt-4 md:mt-0 group flex items-center gap-2"
+                className="text-[#555] hover:text-[#00ff88] transition-colors mt-4 md:mt-0 group flex items-center gap-2 text-small"
               >
                 View all services
                 <svg
@@ -212,23 +199,23 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((service, i) => (
               <Link
                 key={i}
                 href={service.href}
-                className="group p-8 bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#00ff88] transition-all duration-300 hover-glow"
+                className="group p-8 bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#00ff88] transition-all duration-300"
               >
-                <span className="text-[#00ff88] font-mono text-5xl font-bold opacity-20 group-hover:opacity-100 transition-opacity">
+                <span className="text-[#00ff88] font-mono text-4xl font-bold opacity-20 group-hover:opacity-100 transition-opacity">
                   {service.icon}
                 </span>
-                <h3 className="text-xl font-semibold mt-4 mb-3 group-hover:text-[#00ff88] transition-colors">
+                <h3 className="text-h3 mt-4 mb-3 group-hover:text-[#00ff88] transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-[#888] text-sm leading-relaxed">
+                <p className="text-small text-[#888] leading-relaxed">
                   {service.description}
                 </p>
-                <div className="mt-6 flex items-center gap-2 text-sm text-[#888] group-hover:text-[#00ff88] transition-colors">
+                <div className="mt-6 flex items-center gap-2 text-small text-[#555] group-hover:text-[#00ff88] transition-colors">
                   <span>Learn more</span>
                   <svg
                     className="w-4 h-4 transition-transform group-hover:translate-x-1"
@@ -250,24 +237,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Work */}
+      {/* Featured Work - Asymmetric Collage Layout */}
       <section className="py-32 px-6 bg-[#050505] relative">
         <div className="gradient-orb top-1/2 -left-40 -translate-y-1/2" />
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <ScrollReveal>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
               <div>
-                <div className="accent-bar" />
-                <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
-                  Featured Work
-                </p>
-                <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                  Case Studies
-                </h2>
+                <span className="section-label block mb-4">Featured Work</span>
+                <h2 className="text-h2">Case Studies</h2>
               </div>
               <Link
                 href="/work"
-                className="text-[#888] hover:text-[#00ff88] transition-colors mt-4 md:mt-0 group flex items-center gap-2"
+                className="text-[#555] hover:text-[#00ff88] transition-colors mt-4 md:mt-0 group flex items-center gap-2 text-small"
               >
                 Explore all work
                 <svg
@@ -287,60 +269,137 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          {/* Featured large card with parallax */}
-          <ScrollReveal direction="scale">
-            <Parallax speed={0.05}>
+          {/* Asymmetric Grid Layout */}
+          <div className="grid lg:grid-cols-12 gap-4">
+            {/* Large featured image - left */}
+            <ScrollReveal className="lg:col-span-7" direction="left">
               <Link
-                href={`/work/${featuredWork[0].slug}`}
-                className="group relative aspect-[21/9] overflow-hidden mb-6 block image-hover-zoom"
+                href="/work/electric-animals"
+                className="group relative block h-full min-h-[500px] lg:min-h-[600px] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
               >
                 <Image
-                  src={featuredWork[0].image}
-                  alt={featuredWork[0].name}
+                  src="/images/electric-animals-foto-carlcox.webp"
+                  alt="Electric Animals"
                   fill
-                  className="object-cover"
-                  priority
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                <div className="absolute inset-0 border border-[#1a1a1a] group-hover:border-[#00ff88] transition-colors z-10" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 z-10">
-                  <p className="text-[#00ff88] text-sm uppercase tracking-wider mb-3 font-mono">
-                    {featuredWork[0].category}
-                  </p>
-                  <h3 className="text-3xl md:text-5xl font-bold group-hover:text-[#00ff88] transition-colors">
-                    {featuredWork[0].name}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-10 z-10">
+                  <span className="section-label text-xs">Festival Production</span>
+                  <h3 className="text-h3 mt-2 group-hover:text-[#00ff88] transition-colors">
+                    Electric Animals
                   </h3>
+                  <p className="text-small text-[#888] mt-2 max-w-md">
+                    Full-scale festival production featuring international artists
+                  </p>
                 </div>
               </Link>
-            </Parallax>
-          </ScrollReveal>
+            </ScrollReveal>
 
-          {/* Secondary cards */}
-          <StaggerContainer className="grid md:grid-cols-2 gap-6">
-            {featuredWork.slice(1).map((work, i) => (
-              <Link
-                key={i}
-                href={`/work/${work.slug}`}
-                className="group relative aspect-[16/9] overflow-hidden image-hover-zoom"
-              >
-                <Image
-                  src={work.image}
-                  alt={work.name}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                <div className="absolute inset-0 border border-[#1a1a1a] group-hover:border-[#00ff88] transition-colors z-10" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
-                  <p className="text-[#00ff88] text-xs uppercase tracking-wider mb-2 font-mono">
-                    {work.category}
-                  </p>
-                  <h3 className="text-2xl md:text-3xl font-bold group-hover:text-[#00ff88] transition-colors">
-                    {work.name}
-                  </h3>
-                </div>
-              </Link>
-            ))}
+            {/* Stacked images - right */}
+            <div className="lg:col-span-5 flex flex-col gap-4">
+              <ScrollReveal direction="right">
+                <Link
+                  href="/work/blockchain-jungle"
+                  className="group relative block aspect-[16/10] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+                >
+                  <Image
+                    src="/images/blockchain-jungle-fotos-bj-1-of-1-3.webp"
+                    alt="Blockchain Jungle"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                    <span className="section-label text-xs">Conference</span>
+                    <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                      Blockchain Jungle
+                    </h3>
+                  </div>
+                </Link>
+              </ScrollReveal>
+
+              <ScrollReveal direction="right" delay={100}>
+                <Link
+                  href="/work/magflow"
+                  className="group relative block aspect-[16/10] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+                >
+                  <Image
+                    src="/images/magflow-jacobcollier-fotos-jacob-1-of-1-10.webp"
+                    alt="Magflow - Jacob Collier"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                    <span className="section-label text-xs">Concert Production</span>
+                    <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                      Magflow — Jacob Collier
+                    </h3>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            </div>
+          </div>
+
+          {/* Additional row */}
+          <StaggerContainer className="grid md:grid-cols-3 gap-4 mt-4">
+            <Link
+              href="/work/sweetspot"
+              className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+            >
+              <Image
+                src="/images/ss_img_0083.webp"
+                alt="Sweetspot"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <span className="section-label text-xs">Esports</span>
+                <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                  Sweetspot
+                </h3>
+              </div>
+            </Link>
+
+            <Link
+              href="/work/pura-tinta"
+              className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+            >
+              <Image
+                src="/images/pura-tinta-fotos-puratintajpg4.webp"
+                alt="Pura Tinta"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <span className="section-label text-xs">Event Production</span>
+                <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                  Pura Tinta
+                </h3>
+              </div>
+            </Link>
+
+            <Link
+              href="/work/oneiro"
+              className="group relative aspect-[4/3] overflow-hidden border border-[#1a1a1a] hover:border-[#00ff88] transition-colors"
+            >
+              <Image
+                src="/images/electric-animals-foto-oneiro2025.webp"
+                alt="Oneiro 2025"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <span className="section-label text-xs">Festival</span>
+                <h3 className="text-lg font-semibold mt-1 group-hover:text-[#00ff88] transition-colors">
+                  Oneiro 2025
+                </h3>
+              </div>
+            </Link>
           </StaggerContainer>
         </div>
       </section>
@@ -348,33 +407,28 @@ export default function Home() {
       {/* How We Work */}
       <section className="py-32 px-6 relative overflow-hidden">
         <div className="gradient-orb gradient-orb-3 bottom-0 right-0" />
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <div className="accent-bar mx-auto" />
-              <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-4 font-mono">
-                Our Process
-              </p>
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                How We Work
-              </h2>
+              <span className="section-label block mb-4">Our Process</span>
+              <h2 className="text-h2">How We Work</h2>
             </div>
           </ScrollReveal>
 
           <StaggerContainer className="grid md:grid-cols-4 gap-8">
             {processSteps.map((step, i) => (
               <div key={i} className="relative group">
-                <div className="text-8xl font-bold text-[#0a0a0a] group-hover:text-[#111] transition-colors">
+                <div className="text-8xl font-bold text-[#111] group-hover:text-[#1a1a1a] transition-colors">
                   {step.number}
                 </div>
                 <div className="absolute top-8 left-4">
-                  <div className="w-3 h-3 bg-[#00ff88] mb-4 shadow-[0_0_10px_rgba(0,255,136,0.8)]" />
-                  <h3 className="text-xl font-semibold">{step.title}</h3>
-                  <p className="text-[#888]">{step.subtitle}</p>
+                  <div className="w-2 h-2 bg-[#00ff88] mb-4" />
+                  <h3 className="text-h3">{step.title}</h3>
+                  <p className="text-small text-[#555]">{step.subtitle}</p>
                 </div>
                 {i < processSteps.length - 1 && (
                   <div className="hidden md:block absolute top-12 left-full w-full">
-                    <div className="h-px bg-gradient-to-r from-[#00ff88]/50 to-transparent" />
+                    <div className="h-px bg-gradient-to-r from-[#1a1a1a] to-transparent" />
                   </div>
                 )}
               </div>
@@ -382,7 +436,7 @@ export default function Home() {
           </StaggerContainer>
 
           <ScrollReveal className="text-center mt-16">
-            <Link href="/process" className="btn-secondary magnetic">
+            <Link href="/process" className="btn-secondary">
               Learn About Our Process
             </Link>
           </ScrollReveal>
@@ -394,24 +448,20 @@ export default function Home() {
 
       {/* Ecosystem Section */}
       <section className="py-32 px-6 bg-[#050505] border-y border-[#1a1a1a] relative overflow-hidden">
-        <div className="glow-line absolute top-0 left-0 right-0" />
         <div className="gradient-orb gradient-orb-2 top-0 left-1/2 -translate-x-1/2" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollReveal>
-            <div className="accent-bar mx-auto" />
-            <p className="text-[#00ff88] text-sm uppercase tracking-[0.2em] mb-6 font-mono">
-              Ecosystem
-            </p>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 leading-tight">
-              Strategy designed by <span className="text-[#888]">Broccoli</span>.<br />
-              Executed by <span className="text-[#00ff88] glow-text">XR Studio</span>.
+            <span className="section-label block mb-6">Ecosystem</span>
+            <h2 className="text-h2 mb-8 leading-tight">
+              Strategy designed by <span className="text-[#555]">Broccoli</span>.<br />
+              Executed by <span className="text-[#00ff88]">XR Studio</span>.
             </h2>
-            <p className="text-[#888] text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+            <p className="text-body-lg mb-10 max-w-2xl mx-auto">
               We operate as the execution arm within a larger strategic ecosystem.
               Broccoli designs the system and strategy. XR Studio brings it to life
               with operational precision and technical excellence.
             </p>
-            <Link href="/about" className="btn-secondary magnetic">
+            <Link href="/about" className="btn-secondary">
               Learn About Our Ecosystem
             </Link>
           </ScrollReveal>
@@ -421,17 +471,17 @@ export default function Home() {
       {/* CTA Footer Band */}
       <section className="py-32 px-6 relative overflow-hidden">
         <div className="gradient-orb top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute inset-0 grid-pattern" />
+        <div className="absolute inset-0 grid-pattern opacity-20" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+            <h2 className="text-h1 mb-8">
               Execute with<br />
               <span className="gradient-text-animated">confidence</span>.
             </h2>
-            <p className="text-[#888] text-lg mb-10 max-w-xl mx-auto">
+            <p className="text-body-lg mb-10 max-w-xl mx-auto">
               Ready to bring precision and control to your next live experience?
             </p>
-            <Link href="/contact" className="btn-primary text-lg magnetic">
+            <Link href="/contact" className="btn-primary">
               Contact XR Studio
             </Link>
           </ScrollReveal>
