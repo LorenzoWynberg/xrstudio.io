@@ -37,12 +37,28 @@ pnpm lint         # Run ESLint
 
 ## Workflow Rules
 
-- **Append-only changelog**: After EVERY task/change, immediately add an entry to the Changelog below. This is a running log of all work done.
+- **Update activity log**: After EVERY task/change, append an entry to the Activity Log below (newest at bottom)
+- **Update changelog**: Group related changes by date in the Changelog section
 - **Always update docs**: Keep documentation in sync with code changes
 - **Commit frequently**: Make atomic commits after each logical change
 - **Push immediately**: Push after every commit
 
-## Changelog (append-only)
+## Activity Log (append-only, newest at bottom)
+
+```
+2026-01-14 00:15 - Redesigned process section with card layout and hover effects
+2026-01-14 00:18 - Made process grid 2x2 on md screens, 4-col on lg
+2026-01-14 00:20 - Reduced process grid container size on md screens
+2026-01-14 00:25 - Increased tech background line thickness (0.5 → 1.5)
+2026-01-14 00:30 - Fixed broken link /work/pura-tinta → /work/pura-tinta-fest
+2026-01-14 00:30 - Fixed broken link /work/oneiro → /work/electric-animals
+2026-01-14 00:35 - Diversified hero slider images, added Sweetspot
+2026-01-14 00:40 - Added background image to Ecosystem section
+2026-01-14 00:45 - Added workflow rules to CLAUDE.md
+2026-01-14 00:50 - Added Activity Log section to CLAUDE.md
+```
+
+## Changelog (by version/date)
 
 ### 2026-01-14
 - **Workflow rules update**: Clarified append-only changelog requirement in CLAUDE.md
