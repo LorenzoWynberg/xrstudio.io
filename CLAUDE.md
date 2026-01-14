@@ -61,6 +61,8 @@ pnpm lint         # Run ESLint
 2026-01-14 01:00 - Added green highlight effect to Ecosystem headline with white text for brand names
 2026-01-14 01:02 - Changed Ecosystem headline brand names to all black text
 2026-01-14 01:03 - Changed Ecosystem paragraph text to white
+2026-01-14 01:05 - Updated Ecosystem headline: Broccoli light gray (#444), XR Studio white
+2026-01-14 01:06 - Reverted Ecosystem headline to all black text
 ```
 
 ## Changelog (by version/date)
