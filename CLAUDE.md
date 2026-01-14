@@ -26,7 +26,7 @@ pnpm lint         # Run ESLint
   - `page.tsx` - Home page
   - `globals.css` - Global styles and Tailwind imports
 - `public/` - Static assets
-- `log/` - Changelog and activity logs
+- `logs/` - Changelog and activity logs
   - `CHANGELOG.md` - Version changelog grouped by date
   - `activity/` - Daily activity logs (one file per day)
 - `@/*` path alias maps to project root
@@ -40,13 +40,13 @@ pnpm lint         # Run ESLint
 
 ## Workflow Rules
 
-- **Update activity log**: After EVERY task/change, append an entry to `log/activity/YYYY-MM-DD.md` (create new file for each day)
-- **Update changelog**: Group related changes by date in `log/CHANGELOG.md`
+- **Update activity log**: After EVERY task/change, append an entry to `logs/activity/YYYY-MM-DD.md` (create new file for each day)
+- **Update changelog**: Group related changes by date in `logs/CHANGELOG.md`
 - **Always update docs**: Keep documentation in sync with code changes
 - **Commit frequently**: Make atomic commits after each logical change
 - **Push immediately**: Push after every commit
 
 ## Log Files
 
-- **Changelog**: `log/CHANGELOG.md` - High-level changes grouped by date/version
-- **Activity Log**: `log/activity/YYYY-MM-DD.md` - Detailed append-only log of every task, one file per day
+- **Changelog**: `logs/CHANGELOG.md` - High-level changes grouped by date/version
+- **Activity Log**: `logs/activity/YYYY-MM-DD.md` - Detailed append-only log of every task, one file per day
